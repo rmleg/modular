@@ -1,0 +1,57 @@
+body {
+	background: #ddd;
+}
+
+header.site-header .site-branding {
+	background:#fff
+}
+
+.main-navigation ul ul, #site-navigation.toggled, ul.nav-menu li a:hover, .subpages-small {
+	background: #fff;
+}
+
+a.read-more, a.more-link, .nav-links a {
+	background: #dcecf7;
+}
+
+#content a {
+	color: #71a6c6;
+}
+
+footer#colophon.site-footer {
+	background: #eaf5fc;
+}
+
+footer#colophon.site-footer, footer#colophon.site-footer .site-info a {
+	color: #71a6c6;
+}
+
+ul.nav-menu li a{
+	color: #333;
+}
+
+.widget-area ul li a {
+	background: #f4f9fc;
+}
+
+.widget-area ul li a:hover {
+	background: #eaf5fc;
+}
+
+.widget_search .search-field, #subscribe-email input, #subscribe-submit input[type="submit"] {
+	border-color: #91c2e2;
+}
+
+#subscribe-submit input[type="submit"] {
+	background: #deecf4;
+}
+
+#secondary {
+	background:#dcecf7;
+}
+
+#site-navigation.toggled li.current-menu-item a,
+#site-navigation.toggled li.menu-item a:hover {
+	background: #eee;
+}
+

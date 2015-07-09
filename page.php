@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package A Dance With Mobile First
+ * @package Adaptable
  */
 
 get_header(); ?>

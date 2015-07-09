@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package A Dance With Mobile First
+ * @package Adaptable
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -19,12 +19,13 @@
 <link href='http://fonts.googleapis.com/css?family=Sintony:700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'a-dance-with-mobile-first' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'adaptable' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner" >
 		<div class="site-branding">
@@ -44,7 +45,7 @@
   						<use xlink:href=\"" . get_template_directory_uri() . "/open-iconic.svg#menu\" class=\"icon-menu\" alt=\"Menu\"></use>
 					</svg>";
 			?>
-			<button class="menu-toggle"><?php _e( $menuicon, 'a-dance-with-mobile-first' ); ?></button>
+			<button class="menu-toggle"><?php _e( $menuicon, 'adaptable' ); ?></button>
 			
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->

@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package A Dance With Mobile First
+ * @package Adaptable
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses a_dance_with_mobile_first_header_style()
- * @uses a_dance_with_mobile_first_admin_header_style()
- * @uses a_dance_with_mobile_first_admin_header_image()
+ * @uses adaptable_header_style()
+ * @uses adaptable_admin_header_style()
+ * @uses adaptable_admin_header_image()
  */
-function a_dance_with_mobile_first_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'a_dance_with_mobile_first_custom_header_args', array(
+function adaptable_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'adaptable_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'a_dance_with_mobile_first_header_style',
-		'admin-head-callback'    => 'a_dance_with_mobile_first_admin_header_style',
-		'admin-preview-callback' => 'a_dance_with_mobile_first_admin_header_image',
+		'wp-head-callback'       => 'adaptable_header_style',
+		'admin-head-callback'    => 'adaptable_admin_header_style',
+		'admin-preview-callback' => 'adaptable_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'a_dance_with_mobile_first_custom_header_setup' );
+add_action( 'after_setup_theme', 'adaptable_custom_header_setup' );
 
-if ( ! function_exists( 'a_dance_with_mobile_first_header_style' ) ) :
+if ( ! function_exists( 'adaptable_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see a_dance_with_mobile_first_custom_header_setup().
+ * @see adaptable_custom_header_setup().
  */
-function a_dance_with_mobile_first_header_style() {
+function adaptable_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function a_dance_with_mobile_first_header_style() {
 	</style>
 	<?php
 }
-endif; // a_dance_with_mobile_first_header_style
+endif; // adaptable_header_style
 
-if ( ! function_exists( 'a_dance_with_mobile_first_admin_header_style' ) ) :
+if ( ! function_exists( 'adaptable_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see a_dance_with_mobile_first_custom_header_setup().
+ * @see adaptable_custom_header_setup().
  */
-function a_dance_with_mobile_first_admin_header_style() {
+function adaptable_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function a_dance_with_mobile_first_admin_header_style() {
 	</style>
 <?php
 }
-endif; // a_dance_with_mobile_first_admin_header_style
+endif; // adaptable_admin_header_style
 
-if ( ! function_exists( 'a_dance_with_mobile_first_admin_header_image' ) ) :
+if ( ! function_exists( 'adaptable_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see a_dance_with_mobile_first_custom_header_setup().
+ * @see adaptable_custom_header_setup().
  */
-function a_dance_with_mobile_first_admin_header_image() {
+function adaptable_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function a_dance_with_mobile_first_admin_header_image() {
 	</div>
 <?php
 }
-endif; // a_dance_with_mobile_first_admin_header_image
+endif; // adaptable_admin_header_image

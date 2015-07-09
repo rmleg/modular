@@ -1,17 +1,25 @@
 /*
-Theme Name: A Dance With Mobile First
-Author: Rachel Leggett
-Author URI: http://rachelleggett.com/
-Description: This responsive theme is based on the Underscores framework.
+Theme Name: Adaptable
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
 Version: 1.0-wpcom
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: a-dance-with-mobile-first
+Text Domain: adaptable
 Domain Path: /languages/
 Tags:
 
- A Dance With Mobile First is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 
+ Adaptable is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
 */
 
 /*--------------------------------------------------------------
@@ -129,6 +137,8 @@ textarea {
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -142,6 +152,11 @@ b, strong {
 dfn, cite, em, i {
 	font-style: italic;
 }
+
+em cite, cite em, blockquote cite {
+	font-weight: bold;
+}
+
 blockquote {
 	margin: 0 1.5em;
 	font-style: italic;
@@ -552,6 +567,10 @@ a:active {
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
+}
+
+li.cat-item ul.children {
+	margin-left: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -1295,34 +1314,6 @@ h1.site-title a {
 	#content {
 		padding-bottom: 26px;
 	}
-
-	/*#colophon {
-		display: none;
-	}
-
-	#colophon-left {
-		display: block;
-		width: 23%;
-		float: left;
-	}
-
-	footer#colophon-left.site-footer {
-		background: #a993d6;
-		font-size: .8em;
-		padding: 10px 20px;
-		color: #e1d9f9;
-		font-family: arial;
-	}
-
-	footer#colophon-left.site-footer .site-info a {
-		color: #e1d9f9;
-		text-decoration: none;
-		border-bottom: 1px dotted;
-	}
-
-	footer#colophon-left.site-footer .site-info a:hover {
-		border-bottom: none;
-	}*/
 }
 
 @media screen and (min-width: 1530px) {
@@ -1330,4 +1321,8 @@ h1.site-title a {
 		width: 1500px;
 		margin: 0 auto;
 	}
+}
+
+.recentcomments a {
+	background: none !important;
 }

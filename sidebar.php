@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package A Dance With Mobile First
+ * @package Adaptable
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -10,9 +10,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<?php if ( get_theme_mod( 'a_dance_with_mobile_first_logo' ) ) : ?>
+<?php if ( get_theme_mod( 'adaptable_logo' ) ) : ?>
     <div id='sidebar-site-logo'>
-        <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'a_dance_with_mobile_first_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+        <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'adaptable_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
     </div>
 <?php else : ?>
     <!-- Nothing to display -->

@@ -1,8 +1,8 @@
 <?php
 /**
- * A Dance With Mobile First functions and definitions
+ * Adaptable functions and definitions
  *
- * @package A Dance With Mobile First
+ * @package Adaptable
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'a_dance_with_mobile_first_setup' ) ) :
+if ( ! function_exists( 'adaptable_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'a_dance_with_mobile_first_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function a_dance_with_mobile_first_setup() {
+function adaptable_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on A Dance With Mobile First, use a find and replace
-	 * to change 'a-dance-with-mobile-first' to the name of your theme in all the template files
+	 * If you're building a theme based on Adaptable, use a find and replace
+	 * to change 'adaptable' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'a-dance-with-mobile-first', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'adaptable', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -42,7 +42,7 @@ function a_dance_with_mobile_first_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'a-dance-with-mobile-first' ),
+		'primary' => __( 'Primary Menu', 'adaptable' ),
 	) );
 	
 	/*
@@ -62,22 +62,22 @@ function a_dance_with_mobile_first_setup() {
 	) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'a_dance_with_mobile_first_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'adaptable_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // a_dance_with_mobile_first_setup
-add_action( 'after_setup_theme', 'a_dance_with_mobile_first_setup' );
+endif; // adaptable_setup
+add_action( 'after_setup_theme', 'adaptable_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function a_dance_with_mobile_first_widgets_init() {
+function adaptable_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'a-dance-with-mobile-first' ),
+		'name'          => __( 'Sidebar', 'adaptable' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -86,25 +86,29 @@ function a_dance_with_mobile_first_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'a_dance_with_mobile_first_widgets_init' );
+add_action( 'widgets_init', 'adaptable_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function a_dance_with_mobile_first_scripts() {
-	wp_enqueue_style( 'a-dance-with-mobile-first-style', get_stylesheet_uri() );
+function adaptable_scripts() {
+	$color_scheme = get_template_directory_uri() . '/' . get_theme_mod('adaptable_color_scheme');
 
-	wp_enqueue_script( 'a-dance-with-mobile-first-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_style( 'adaptable-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'a-dance-with-mobile-first-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_style( 'adaptable-color-scheme', $color_scheme);
 
-	wp_enqueue_script('a-dance-with-mobile-first-rl-scripts', get_template_directory_uri() . '/js/rl_scripts.js', array(), '1', true );
+	wp_enqueue_script( 'adaptable-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'adaptable-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script('adaptable-rl-scripts', get_template_directory_uri() . '/js/rl_scripts.js', array(), '1', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'a_dance_with_mobile_first_scripts' );
+add_action( 'wp_enqueue_scripts', 'adaptable_scripts' );
 
 /**
  * Implement the Custom Header feature.

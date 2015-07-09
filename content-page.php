@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package A Dance With Mobile First
+ * @package Adaptable
  */
 ?>
 
@@ -15,12 +15,12 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'a-dance-with-mobile-first' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'adaptable' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'a-dance-with-mobile-first' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'adaptable' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
