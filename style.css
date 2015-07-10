@@ -959,6 +959,11 @@ h1.site-title a {
 		text-decoration: none !important;
 	}
 
+	.widget_wpcom_social_media_icons_widget ul li a {
+		display: inline;
+		padding: 0 5px 5px 5px;
+	}
+
 	#secondary, .subpages.small{
 		background: #e1d9f9;
 		margin: 0 -30px;
