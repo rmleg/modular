@@ -135,3 +135,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/* Override default excerpt behavior */
+function adaptable_excerpt_more($more) {
+	return '<a class="more-link" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue reading <span class="meta-nav">&rarr;</span>', 'your-text-domain') . '</a>';
+}
+add_filter('excerpt_more', 'adaptable_excerpt_more');
+
+function adaptable_excerpt_length($length) {
+	return 100;
+}
+add_filter ('excerpt_length', 'adaptable_excerpt_length', 999);

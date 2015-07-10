@@ -16,7 +16,14 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'adaptable' ) ); ?>
+		<?php 
+			if(strpos(get_the_content(), '#more-')) {
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'adaptable' ) );
+			}
+			else {
+				the_excerpt();
+			}
+		 ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'adaptable' ),
