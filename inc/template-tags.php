@@ -90,6 +90,22 @@ function adaptable_posted_on() {
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
 
+	$num_comments = get_comments_number(); // get_comments_number returns only a numeric value
+
+	if ( comments_open() ) {
+		if ( $num_comments == 0 ) {
+			$comments = __('No Comments');
+		} elseif ( $num_comments > 1 ) {
+			$comments = $num_comments . __(' Comments');
+		} else {
+			$comments = __('1 Comment');
+		}
+		$write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
+	} else {
+		$write_comments =  __('Comments are off for this post.');
+	}
+	echo ' ; <span class="comments-head-link"> ' . $write_comments . '</span>';
+
 }
 endif;
 
