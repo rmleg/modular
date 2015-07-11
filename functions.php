@@ -146,3 +146,5 @@ function adaptable_excerpt_length($length) {
 	return 100;
 }
 add_filter ('excerpt_length', 'adaptable_excerpt_length', 999);
+
+add_theme_support( 'post-thumbnails' ); 
