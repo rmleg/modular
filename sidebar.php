@@ -45,4 +45,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
   <?php } ?>
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+<div class="clear"></div> <!-- clears floats if any widgets have them -->
 </div><!-- #secondary -->
