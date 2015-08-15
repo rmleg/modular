@@ -19,11 +19,6 @@
 <link href='http://fonts.googleapis.com/css?family=Sintony:700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-
-<?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -36,6 +31,11 @@
 
 </script>
 <!-- end Google Analytics-->
+
+<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'adaptable' ); ?></a>
