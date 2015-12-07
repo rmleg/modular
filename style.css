@@ -1002,7 +1002,7 @@ h1.site-title a {
 		width: 100%;
 	}
 
-	.jetpack_subscription_widget p#subscribe-email {
+	/*.jetpack_subscription_widget p#subscribe-email {
 		float: left;
 		width: 75%;
 	}
@@ -1010,6 +1010,10 @@ h1.site-title a {
 	.jetpack_subscription_widget p#subscribe-submit {
 		float: right;
 		width: 25%;
+	}*/
+
+	p#subscribe-email {
+		margin-bottom: 1em;
 	}
 
 	#subscribe-email input {
